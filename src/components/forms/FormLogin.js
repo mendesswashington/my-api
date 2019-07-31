@@ -62,11 +62,13 @@ class FormLogin extends React.Component{
       const {email, password} = this.state;
       const response = await api.post('/auth/authenticate',{ email, password });
       const token = response.data.token;
+      alert(response.data)
       login(token);
       window.location.href = `http://localhost:3000/app`;
-    } catch (error) {
+    } catch (e) {
+      const message =  JSON.parse(e.request.response);
       this.setState({
-        error:"Erro ao se autenticar! "+error
+        error: message.error
       });
     }
     
