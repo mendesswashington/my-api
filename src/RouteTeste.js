@@ -46,10 +46,9 @@ export default class Routes extends React.Component{
  }
   sairApp =  event => {
     event.preventDefault();
-   alert(this.state.sair);
     if(this.state.sair === "sair"){
       logout();
-      window.location.href= `http://localhost:3000/`;
+      //window.location.href= `http://localhost:3000/`;
     }
   }
   render(){
