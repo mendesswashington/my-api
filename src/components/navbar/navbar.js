@@ -26,7 +26,7 @@ export default function Navbar(){
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                 <MenuIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h7" className={classes.title}>
                 Washington Santos
             </Typography>
             <Button color="inherit" to="/cadastro/" component={Link}>Cadastro</Button>
